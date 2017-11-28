@@ -1,6 +1,7 @@
 a=1# Simple Linear Regression
 
 # Importing the dataset
+# Data set containing salaries and years of experience for 10 employees
 dataset = read.csv('Salary_Data.csv')
 
 # Splitting the dataset into the Training set and Test set
