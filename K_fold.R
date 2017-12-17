@@ -8,7 +8,6 @@ dataset = dataset[3:5]
 dataset$Purchased = factor(dataset$Purchased, levels = c(0, 1))
 
 # Splitting the dataset into the Training set and Test set
-# install.packages('caTools')
 library(caTools)
 set.seed(123)
 split = sample.split(dataset$Purchased, SplitRatio = 0.75)
@@ -20,7 +19,7 @@ training_set[-3] = scale(training_set[-3])
 test_set[-3] = scale(test_set[-3])
 
 # Fitting Kernel SVM to the Training set
-# install.packages('e1071')
+
 library(e1071)
 classifier = svm(formula = Purchased ~ .,
                  data = training_set,
